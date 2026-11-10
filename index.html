@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Portfólio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark;--tx:#eeeaff;--mut:#b9b0e6;--pink:#ff4d8d;--amb:#f0a14a;--line:rgba(255,255,255,.16);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;color:var(--tx);font:400 1.05rem/1.65 "DM Sans",system-ui,sans-serif;background-color:#0a0457;
+background-image:linear-gradient(135deg,#3a05bd 0%,#1c0a7a 38%,#0a0457 72%);background-attachment:fixed}
+h1,h2,h3{font-family:"Bricolage Grotesque","DM Sans",system-ui,sans-serif;line-height:1.05;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--amb);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:0;z-index:5;background:rgba(14,5,100,.72);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;gap:22px;align-items:center;height:56px;overflow-x:auto;white-space:nowrap}
+nav b{font:800 1.1rem "Bricolage Grotesque",sans-serif;margin-right:auto}
+nav a{text-decoration:none;color:var(--mut);font-weight:500}
+nav a:hover{color:#fff}
+.hero{display:grid;grid-template-columns:1.05fr 1fr;gap:32px;align-items:center;padding:56px 0 40px}
+.hero h1{font-size:clamp(2.6rem,7vw,4.9rem);font-weight:800;letter-spacing:-.02em}
+.role{color:var(--amb);font:700 1.25rem "Bricolage Grotesque",sans-serif;margin:14px 0 18px}
+.hero p{color:var(--mut);max-width:34ch;margin:0 0 26px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:12px 22px;border-radius:999px;font-weight:500;text-decoration:none;border:1.5px solid var(--line);background:rgba(255,255,255,.04)}
+.btn:hover{border-color:var(--amb)}
+.btn.main{border:0;color:#1a0560;font-weight:700;background:linear-gradient(135deg,var(--amb),var(--pink))}
+.art svg{width:100%;height:auto;display:block}
+.steam{stroke-dasharray:3 7}
+@media (prefers-reduced-motion:no-preference){.steam{animation:up 3s linear infinite}}
+@keyframes up{to{stroke-dashoffset:-20}}
+section{padding:64px 0;border-top:1px solid var(--line)}
+section>.wrap>h2{font-size:clamp(1.9rem,4vw,2.7rem);margin-bottom:28px}
+.about{display:grid;grid-template-columns:1fr 1.2fr;gap:40px}
+.about q{font:700 1.7rem/1.2 "Bricolage Grotesque",sans-serif;quotes:"“" "”"}
+.about p{margin:0 0 14px;color:var(--mut)}
+.row{display:grid;grid-template-columns:200px 1fr;gap:20px;padding:16px 0;border-top:1px solid var(--line)}
+.row:last-child{border-bottom:1px solid var(--line)}
+.row h3{font-size:1.15rem;color:var(--amb)}
+.row p{margin:0}
+.feat{border:1.5px solid transparent;border-radius:20px;padding:30px;
+background:linear-gradient(#17087a,#17087a) padding-box,linear-gradient(135deg,var(--amb),var(--pink)) border-box}
+.feat h3{font-size:1.9rem;margin-bottom:10px}
+.feat p{color:var(--mut);max-width:62ch}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 22px;padding:0;list-style:none}
+.tags li{padding:4px 12px;border:1px solid var(--line);border-radius:999px;font-size:.9rem}
+.more{margin-top:22px;color:var(--mut)}
+.mail{display:block;font:800 clamp(1.5rem,5vw,3rem)/1.1 "Bricolage Grotesque",sans-serif;word-break:break-all;margin-bottom:18px;text-decoration:none}
+.mail:hover{color:var(--amb)}
+footer{padding:28px 0 40px;color:var(--mut);font-size:.9rem;border-top:1px solid var(--line)}
+@media (max-width:760px){.hero,.about{grid-template-columns:1fr}.art{order:-1;max-width:420px}.row{grid-template-columns:1fr;gap:4px}.hero{padding-top:28px}}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><b data-f="nome"></b><a href="#sobre">Sobre</a><a href="#habilidades">Habilidades</a><a href="#formacao">Formação</a><a href="#projetos">Projetos</a><a href="#contato">Contato</a></div></nav>
+
+<main class="wrap">
+<header class="hero">
+<div>
+<h1 data-f="nome"></h1>
+<p class="role" data-f="cargo"></p>
+<p data-f="resumo"></p>
+<div class="btns">
+<a class="btn main" href="#projetos">Ver projetos</a>
+<a class="btn" data-h="github" target="_blank" rel="noopener">GitHub</a>
+<a class="btn" data-h="linkedin" target="_blank" rel="noopener">LinkedIn</a>
+</div>
+</div>
+<div class="art">
+<svg viewBox="0 0 520 480" role="img" aria-label="Ilustração de um notebook com código e uma xícara de café">
+<defs>
+<linearGradient id="gs" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f0a14a"/><stop offset="1" stop-color="#ff4d8d"/></linearGradient>
+<linearGradient id="gb" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e58a78"/><stop offset=".45" stop-color="#a52fff"/><stop offset="1" stop-color="#4b0bf0"/></linearGradient>
+<linearGradient id="gt" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3a1a9e"/><stop offset="1" stop-color="#1a0a6e"/></linearGradient>
+</defs>
+<g fill="none" stroke="url(#gs)" stroke-width="2.5" stroke-linejoin="round">
+<path d="M20 330 260 450 500 330 260 210Z"/><path d="M10 405 50 382 90 405 50 428Z"/><path d="M440 410 470 393 500 410 470 427Z"/><path d="M400 60 440 37 480 60 440 83Z"/>
+</g>
+<path d="M70 312 260 407 450 312 260 217Z" fill="#090350" opacity=".8"/>
+<path d="M70 280 260 375 260 389 70 294Z" fill="#5a1fd0"/><path d="M260 375 450 280 450 294 260 389Z" fill="#2a0fa8"/>
+<path d="M260 185 450 280 260 375 70 280Z" fill="url(#gb)"/>
+<g transform="matrix(1.9 .95 -1.9 .95 260 185)" fill="none" stroke="#2b0d82" opacity=".85">
+<g stroke-width="6" stroke-dasharray="5.2 1.8"><path d="M12 22H88M12 31H88M12 40H88M12 49H88"/></g>
+<rect x="34" y="62" width="32" height="20" rx="3" stroke-width="1.5"/>
+</g>
+<path d="M260 185 450 280 450 105 260 10Z" fill="url(#gt)" stroke="url(#gs)" stroke-width="2.5" stroke-linejoin="round"/>
+<g transform="translate(278 27) skewY(26.57)">
+<rect width="152" height="96" rx="4" fill="#4b1a9e" stroke="#fff" stroke-width="1.5"/>
+<g stroke-linecap="round" stroke-width="5">
+<path d="M12 14h22" stroke="#ff4d8d"/><path d="M44 14h34M88 14h18" stroke="#fff"/>
+<path d="M20 28h42" stroke="#f0a14a"/><path d="M20 42h26M56 42h38" stroke="#fff"/>
+<path d="M28 56h32" stroke="#f0a14a"/><path d="M70 56h22" stroke="#fff"/>
+<path d="M12 70h16" stroke="#ff4d8d"/><path d="M38 70h48" stroke="#fff"/>
+</g></g>
+<g transform="translate(40 70)">
+<path d="M10 150 55 125 100 150 55 175Z" fill="none" stroke="url(#gs)" stroke-width="2.5" stroke-linejoin="round"/>
+<path d="M30 60H80L72 140Q55 150 38 140Z" fill="url(#gb)"/>
+<ellipse cx="55" cy="60" rx="25" ry="9" fill="#6a2bff" stroke="#fff" stroke-width="1.5"/>
+<g fill="#f0a14a"><circle cx="55" cy="104" r="7"/><circle cx="46" cy="93" r="2.6"/><circle cx="55" cy="90" r="2.6"/><circle cx="64" cy="93" r="2.6"/></g>
+<path class="steam" d="M52 46C38 28 68 18 55-8" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="4" stroke-linecap="round"/>
+</g>
+</svg>
+</div>
+</header>
+
+<section id="sobre"><div class="wrap about">
+<q>Busco conhecimento além do que os cursos ensinam.</q>
+<div>
+<p data-f="sobre1"></p>
+<p data-f="sobre2"></p>
+</div>
+</div></section>
+
+<section id="habilidades"><div class="wrap">
+<h2>Habilidades</h2>
+<div class="row"><h3>Backend</h3><p>Java 21, Spring Boot, Spring Data JPA, Spring Security, JWT, APIs REST</p></div>
+<div class="row"><h3>Dados</h3><p>SQL, PostgreSQL, Databricks (bronze, silver e gold), Python e Pandas</p></div>
+<div class="row"><h3>Front-end</h3><p>HTML, CSS, JavaScript e Thymeleaf</p></div>
+<div class="row"><h3>Ferramentas</h3><p>Git, GitHub, Maven, IntelliJ IDEA</p></div>
+<div class="row"><h3>Pessoais</h3><p>Comunicação, curiosidade, aprendizado contínuo</p></div>
+</div></section>
+
+<section id="formacao"><div class="wrap">
+<h2>Formação</h2>
+<div class="row"><h3>Graduação</h3><p>Análise e Desenvolvimento de Sistemas, 3º semestre</p></div>
+<div class="row"><h3>Bootcamp</h3><p>Elastech do PagBank, em parceria com a SoulCode Academy: Java e IA</p></div>
+<div class="row"><h3>Inglês</h3><p>Curso online na Efekta</p></div>
+</div></section>
+
+<section id="projetos"><div class="wrap">
+<h2>Projetos</h2>
+<article class="feat">
+<h3>Pede Fruki</h3>
+<p>Catálogo B2B de bebidas que começa numa conversa de WhatsApp: o bot identifica o lojista, entrega um link seguro com a tabela de preço dele e sugere o que pedir, com o motivo de cada sugestão. Feito para o Desafio GC 2026.</p>
+<ul class="tags"><li>Java 21</li><li>Spring Boot</li><li>Supabase</li><li>Databricks</li><li>JWT</li></ul>
+<a class="btn main" data-h="repo" target="_blank" rel="noopener">Ver o código</a>
+</article>
+<p class="more">Há mais projetos no meu <a data-h="github" target="_blank" rel="noopener">GitHub</a>.</p>
+</div></section>
+
+<section id="contato"><div class="wrap">
+<h2>Vamos conversar</h2>
+<a class="mail" data-h="email" data-f="email"></a>
+<div class="btns">
+<a class="btn main" data-h="whatsapp" target="_blank" rel="noopener">WhatsApp (51) 99331-8530</a>
+<button class="btn" id="copiar" type="button">Copiar e-mail</button>
+<a class="btn" data-h="linkedin" target="_blank" rel="noopener">LinkedIn</a>
+<a class="btn" data-h="github" target="_blank" rel="noopener">GitHub</a>
+</div>
+</div></section>
+</main>
+
+<footer><div class="wrap"><span data-f="nome"></span>, portfólio de desenvolvimento.</div></footer>
+
+<script>
+// EDITE AQUI: troque os textos e links abaixo pelos seus.
+const P = {
+  nome: 'Vitória Moraes',
+  cargo: 'Desenvolvedora Java em formação',
+  resumo: 'Estudante de ADS em busca da primeira oportunidade em TI. Gosto de Java, dados e de aprender coisas novas.',
+  sobre1: 'Curso Análise e Desenvolvimento de Sistemas (3º semestre) e participo do bootcamp Elastech do PagBank, em parceria com a SoulCode Academy, focado em Java e IA.',
+  sobre2: 'Sou comunicativa, curiosa e gosto de aprender além do que os cursos pedem. Estou buscando minha primeira oportunidade na área de TI.',
+  email: 'karenvitoria2209@gmail.com',
+  github: 'https://github.com/vitoria-moraes',
+  linkedin: 'https://www.linkedin.com/in/avitoria-moraes/',
+  repo: 'https://github.com/vitoria-moraes/Projeto-final-Fruki',
+  whatsapp: 'https://wa.me/5551993318530'
+};
+document.title = P.nome + ' | Portfólio';
+document.querySelectorAll('[data-f]').forEach(e => { e.textContent = P[e.dataset.f]; });
+document.querySelectorAll('[data-h]').forEach(e => {
+  const k = e.dataset.h;
+  e.href = k === 'email' ? 'mailto:' + P.email : P[k];
+});
+document.getElementById('copiar').addEventListener('click', async e => {
+  try { await navigator.clipboard.writeText(P.email); e.target.textContent = 'E-mail copiado'; }
+  catch (err) { e.target.textContent = 'Copie pelo link acima'; }
+});
+</script>
+</body>
+</html>
